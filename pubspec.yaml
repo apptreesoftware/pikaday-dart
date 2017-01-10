@@ -1,0 +1,15 @@
+name: pikaday
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+author: John Ryan <john.p.ryan4@gmail.com>
+
+environment:
+  sdk: ">=1.0.0 <2.0.0"
+
+dependencies:
+  js: ">=0.6.0 <1.0.0"
+  func: ">=0.1.0 <1.0.0"
+
+dev_dependencies:
+  browser: any
+  test: ">=0.12.0 <0.13.0"
