@@ -1,7 +1,8 @@
 name: pikaday
-description: A starting point for Dart libraries or applications.
+description: package:js bindings for the Pikaday date picker by David Bushnell
 version: 1.0.0
 author: John Ryan <john.p.ryan4@gmail.com>
+homepage: https://github.com/johnpryan/pikaday-dart
 
 environment:
   sdk: ">=1.0.0 <2.0.0"

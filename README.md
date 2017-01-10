@@ -1,17 +1,24 @@
 # pikaday
 
-A library for Dart developers. It is awesome.
+package:js bindings for [Pikaday][pikaday] by David Bushnell.
+
+This includes a version of Pikaday with [time support][pikaday-timezone]
 
 ## Usage
 
-A simple usage example:
+```dart
+main() {
+  new Pikaday(new PikadayOptions(
+    field: document.getElementById('datepicker'),
+    firstDay: 1,
+    minDate: new DateTime.now(),
+    maxDate: new DateTime(2020, 12, 31),
+    yearRange: [2000, 2020],
+    showTime: false,
+  ));
+}
+```
 
-    import 'package:pikaday/pikaday.dart';
-
-    main() {
-      var awesome = new Awesome();
-    }
-    
 ## Generating the library
 
 ```
@@ -22,4 +29,6 @@ dart_js_facade_gen lib/pikaday.d.ts > lib/pikaday.dart
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: http://example.com/issues/replaceme
+[tracker]: http://github.com/johnpryan/pikaday-dart/issues
+[pikaday]: https://github.com/dbushell/Pikaday
+[pikaday-timezone]: https://github.com/owenmead/Pikaday/
