@@ -1,6 +1,6 @@
 name: pikaday
 description: package:js bindings for the Pikaday date picker by David Bushnell
-version: 1.2.0
+version: 1.2.0+1
 author: John Ryan <john.p.ryan4@gmail.com>
 homepage: https://github.com/johnpryan/pikaday-dart
 
@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   js: ">=0.6.0 <1.0.0"
-  func: ">=0.1.0 <1.0.0"
+  func: ">=1.0.0 <2.0.0"
 
 dev_dependencies:
   browser: any
