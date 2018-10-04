@@ -3,7 +3,6 @@ library lib.pikaday;
 
 import "package:js/js.dart";
 import "dart:html" show HtmlElement;
-import "package:func/func.dart";
 
 /// Type definitions for pikaday-time
 /// Project: https://github.com/owenmead/Pikaday
@@ -188,8 +187,8 @@ abstract class PikadayOptions {
 
   /// Callback function that gets passed a Date object for each day
   /// in view. Should return true to disable selection of that day.
-  external Func1<DateTime, bool> get disableDayFn;
-  external set disableDayFn(Func1<DateTime, bool> v);
+  external Function get disableDayFn;
+  external set disableDayFn(Function v);
 
   /// Number of years either side (e.g. 10) or array of upper/lower range
   /// (e.g. [1900, 2015]).
@@ -236,20 +235,20 @@ abstract class PikadayOptions {
   external set theme(String v);
 
   /// Callback function for when a date is selected.
-  external VoidFunc1<DateTime> get onSelect;
-  external set onSelect(VoidFunc1<DateTime> v);
+  external Function get onSelect;
+  external set onSelect(Function v);
 
   /// Callback function for when the picker becomes visible.
-  external VoidFunc0 get onOpen;
-  external set onOpen(VoidFunc0 v);
+  external Function get onOpen;
+  external set onOpen(Function v);
 
   /// Callback function for when the picker is hidden.
-  external VoidFunc0 get onClose;
-  external set onClose(VoidFunc0 v);
+  external Function get onClose;
+  external set onClose(Function v);
 
   /// Callback function for when the picker draws a new month.
-  external VoidFunc0 get onDraw;
-  external set onDraw(VoidFunc0 v);
+  external Function get onDraw;
+  external set onDraw(Function v);
 
   /// --pikaday-time specific addition--
   /// Optional boolean property to specify whether to show time controls with calendar or not.
@@ -301,7 +300,7 @@ abstract class PikadayOptions {
       DateTime minDate,
       DateTime maxDate,
       bool disableWeekends,
-      Func1<DateTime, bool> disableDayFn,
+      Function disableDayFn,
       dynamic /*num|List<num>*/ yearRange,
       bool showWeekNumber,
       bool isRTL,
@@ -312,10 +311,10 @@ abstract class PikadayOptions {
       num numberOfMonths,
       String mainCalendar,
       String theme,
-      VoidFunc1<DateTime> onSelect,
-      VoidFunc0 onOpen,
-      VoidFunc0 onClose,
-      VoidFunc0 onDraw,
+      Function onSelect,
+      Function onOpen,
+      Function onClose,
+      Function onDraw,
       bool showTime,
       bool showMinutes,
       bool showSeconds,
